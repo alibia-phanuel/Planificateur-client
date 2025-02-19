@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="normalize.css" rel="stylesheet" type="text/css">
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <title>Agenda/Planificateur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+            <h1>AGENDA</h1>
+    </header>
+<div class="container">
+<div class="bloc1">
+
+                <ul class="nav">
+                <li class="nav-item">
+                    <img src="Images/couleur.svg">
+                        <span class="nav-label">Couleur</span>
+                </li>
+                <li class="nav-item">
+                    <img src="Images/texte.svg">
+                        <span class="nav-label">Police</span>
+                </li>
+                <li class="nav-item">
+                    <img src="Images/dollars.svg"
+                        <span class="nav-label">Finance</span>
+                </li>
+                <li class="nav-item">
+                    <img src="Images/diamand.svg">
+                        <span class="nav-label">Premium</span>
+                </li>
+                <li class="nav-item">
+                    <img src="Images/mail.svg">
+                        <span class="nav-label">Nous joindre</span>
+                </li>
+            </ul>
+            <div class="copyright"><h4>&copy;Agenda 2025. Tous droit réservés.</div>
+</div>
+
+<div class="bloc2">
+
+    <div>
+        <button onclick="openTab(0)" class="active">Jour</button>
+        <button onclick="openTab(1)">Mois</button>
+    </div>
+
+    <div class="intop10">
+        
+        <div class="tab-content" style="display:block">
+            
+            <pre><</pre>
+            <span id="month">Février</span>
+            <span id="year">2021</span>
+            <pre>></pre>
+
+            <div class="calendar-week-day">
+                <div>Dim</div>
+                <div>Lun</div>
+                <div>Mar</div>
+                <div>Mer</div>
+                <div>Jeu</div>
+                <div>Ven</div>
+                <div>Sam</div>
+            </div>
+            <div class="calendar-days">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+            </div>
+
+            <form>
+                <label for="heure">5:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">6:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">7:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">8:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">9:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">10:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">11:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">12:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">13:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">14:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">15:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">16:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">17:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">18:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">19:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">20:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">21:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">22:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+            <form>
+                <label for="heure">23:00</label>
+                <input type="text" id="heure" name="heure" value="" placeholder=""<br>
+            </form>
+        </div>
+    </div>
+
+        <div class="tab-content">
+            <div class="bloc">
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <pre><</pre>
+                        <span class="month-picker" id="month-picker">
+                            Février
+                        </span>   
+                        <div class="year-picker">
+                            <span class="year-change" id="prev-year"> 
+                            </span>
+                            <span id="year">2021</span>
+                            <span class="year-change" id="next-year">
+                                <pre>></pre>
+                            </span>
+                        </div>
+                    </div>
+                
+                <div class="calendar-body">
+                    <div class="calendar-week-day">
+                        <div>Dim</div>
+                        <div>Lun</div>
+                        <div>Mar</div>
+                        <div>Mer</div>
+                        <div>Jeu</div>
+                        <div>Ven</div>
+                        <div>Sam</div>
+                    </div>
+                </div>
+                
+                <div class="calendar-days">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div> 
+                        <div>7</div>      
+                </div>
+                
+                <div class="month-list"></div>
+                </div>
+                
+                </div>       
+                </div>
+        </div>
+    <div>
+</div>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
