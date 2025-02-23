@@ -442,3 +442,47 @@ nav .menu li:hover a {
   font-weight: 400; /* Poids léger pour la date */
   color: #878895; /* Couleur gris clair pour la date */
 }
+@media (max-width: 768px) {
+  .body-centent {
+    display: flex;
+    flex-direction: column;
+  }
+  .body-content-menu {
+    width: 100%;
+  }
+  /* Section à gauche du calendrier */
+  .left {
+    width: 100%; /* Prend 68% de la largeur totale */
+  }
+
+  .body-content-menu nav ul {
+    display: flex;
+
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    flex-wrap: wrap;
+  }
+  .body-content-menu nav ul li {
+    margin: 2px;
+  }
+  nav .menu li:hover {
+    background-color: rgb(23, 21, 18); /* Changement de couleur de fond */
+    font-weight: normal; /* Mise en gras du texte */
+    color: white; /* Changement de couleur du texte */
+  }
+  nav .menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+    font-size: 14px;
+  }
+  /* Effet de décalage des liens lors du survol */
+  nav .menu li:hover a {
+    left: 0px; /* Décalage du lien vers la droite */
+  }
+}
