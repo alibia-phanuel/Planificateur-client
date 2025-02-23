@@ -1,0 +1,444 @@
+/* ================================
+   RESET CSS MODERNE
+   Ce reset CSS vise à normaliser l'apparence des éléments HTML 
+   sur tous les navigateurs pour garantir une base cohérente.
+   ================================= */
+
+/* Supprime les marges et les paddings par défaut et applique le modèle de boîte border-box */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-clr: #504e4c;
+}
+/* Active un défilement fluide pour les ancres internes */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Améliore l'apparence du texte et applique une hauteur de ligne lisible */
+body {
+  line-height: 1.5;
+  background-color: rgba(245, 244, 244, 0.84);
+  -webkit-font-smoothing: antialiased; /* Lisse le texte sur les navigateurs WebKit */
+  font-family: sans-serif; /* Utilise une police sans-serif par défaut */
+}
+
+/* Assure que les images, vidéos et autres médias s'adaptent à leur conteneur */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Hérite de la police principale pour les champs de formulaire et les boutons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Supprime les styles par défaut des listes non ordonnées et ordonnées */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Supprime le soulignement et applique la couleur du texte parent aux liens */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Supprime les bordures des tableaux et assure une largeur de 100% */
+table {
+  border-collapse: collapse; /* Supprime l'espace entre les cellules */
+  width: 100%;
+}
+/* START CSS CODE APP */
+.header {
+  background: url("../images/agenda.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+}
+.bg-color {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(252, 246, 239, 0.909);
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: rgb(19, 19, 19);
+}
+.textHeader {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+/* Animation du contenu (float du haut vers le bas) */
+.content {
+  animation: float 2s ease-in-out infinite; /* Animation en boucle */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Animation de flottement du haut vers le bas */
+@keyframes float {
+  0% {
+    transform: translateY(-20px); /* Début un peu plus haut */
+  }
+  50% {
+    transform: translateY(20px); /* Descend */
+  }
+  100% {
+    transform: translateY(-20px); /* Remonte au point initial */
+  }
+}
+
+/* Texte et icône */
+.text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Espace entre le texte et l'icône */
+}
+
+/* Ligne centrale */
+.line {
+  position: absolute;
+
+  bottom: 0px; /* Positionne la ligne en bas du container */
+  width: 100%; /* Largeur de 60% */
+  height: 2px; /* Épaisseur de la ligne */
+  background-color: rgb(39, 38, 37); /* Couleur de la ligne */
+}
+
+/* Style du container */
+.container {
+  height: calc(100vh - 400px);
+  width: 100%; /* Utilise toute la largeur disponible */
+  max-width: 1280px; /* Limite la largeur à 1280px (équivalent de Tailwind `container`) */
+  margin-left: auto; /* Centre le container */
+  margin-right: auto; /* Centre le container */
+  padding-left: 1rem; /* Équivalent de `px-4` en Tailwind (16px) */
+  padding-right: 1rem; /* Équivalent de `px-4` en Tailwind (16px) */
+}
+/* Section principale du corps de la page */
+.body-centent {
+  height: calc(
+    100% - 50px
+  ); /* Définit la hauteur de la section en soustrayant la hauteur du footer */
+  display: flex; /* Utilisation du modèle Flexbox pour la mise en page */
+}
+
+/* Section du footer */
+.body-footer {
+  height: 50px; /* Hauteur fixe pour le footer */
+  background-color: antiquewhite; /* Couleur de fond du footer */
+  border-top: 1px solid rgb(248, 206, 152); /* Bordure supérieure du footer */
+  display: flex; /* Flexbox pour aligner les éléments à l'intérieur */
+  justify-content: center; /* Centre horizontalement le contenu */
+  align-items: center; /* Centre verticalement le contenu */
+}
+
+/* Menu latéral gauche */
+.body-content-menu {
+  background-color: white; /* Couleur de fond du menu */
+  width: 20%; /* Largeur du menu */
+  height: 100%; /* Hauteur du menu pour qu'il prenne toute la hauteur de l'écran */
+  padding: 8px; /* Espacement interne du menu */
+  border-right: 1px solid rgb(248, 206, 152); /* Bordure droite pour séparer le menu */
+}
+
+/* Navigation principale */
+nav {
+  display: flex; /* Utilisation de Flexbox pour la mise en page de la navigation */
+  align-items: center; /* Aligne verticalement les éléments de la navigation */
+  height: 100%; /* Hauteur de la navigation égale à la hauteur du menu */
+}
+
+/* Structure du menu (éléments de la liste) */
+nav .menu {
+  display: flex; /* Flexbox pour disposer les éléments du menu en colonne */
+  flex-direction: column; /* Orientation verticale pour les éléments du menu */
+  justify-content: space-between; /* Espacement égal entre les éléments du menu */
+  width: 100%; /* Utilise toute la largeur disponible */
+  height: 300px; /* Hauteur fixe du menu */
+  padding: 4px; /* Espacement interne du menu */
+}
+
+/* Style des éléments de la liste dans le menu */
+nav .menu li {
+  padding: 4px; /* Espacement interne pour chaque élément du menu */
+  transition: 1s; /* Transition pour des effets visuels lors du survol */
+  border-radius: 6px; /* Coins arrondis pour chaque élément du menu */
+  position: relative; /* Nécessaire pour les effets de positionnement lors du survol */
+}
+
+/* Effet visuel au survol des éléments du menu */
+nav .menu li:hover {
+  background-color: rgb(23, 21, 18); /* Changement de couleur de fond */
+  font-weight: bold; /* Mise en gras du texte */
+  color: white; /* Changement de couleur du texte */
+}
+
+/* Style des liens dans les éléments de menu */
+nav .menu li a {
+  position: relative; /* Nécessaire pour le positionnement lors du survol */
+}
+
+/* Effet de décalage des liens lors du survol */
+nav .menu li:hover a {
+  left: 10px; /* Décalage du lien vers la droite */
+}
+
+/* Section calendrier */
+.body-content-calendar {
+  background: white; /* Couleur de fond de la section calendrier */
+  width: 100%; /* Prend toute la largeur disponible */
+  padding: 10px; /* Espacement interne */
+  display: flex; /* Flexbox pour centrer le calendrier */
+  justify-content: center; /* Centre le calendrier horizontalement */
+  align-items: center; /* Centre le calendrier verticalement */
+}
+
+/* Style de la section contenant le calendrier */
+.containers {
+  position: relative; /* Positionnement relatif pour un contrôle précis des éléments */
+  width: 100%; /* Prend toute la largeur de la page */
+  min-height: 100%; /* Prend toute la hauteur de la page */
+  margin: 0 auto; /* Centre le calendrier horizontalement */
+  padding: 5px; /* Espacement interne */
+  color: #fff; /* Couleur du texte */
+  display: flex; /* Utilisation de Flexbox pour organiser les éléments */
+  border-radius: 10px; /* Coins arrondis */
+  overflow: hidden; /* Masque les éléments qui dépassent de la section */
+}
+
+/* Section à gauche du calendrier */
+.left {
+  width: 68%; /* Prend 68% de la largeur totale */
+}
+
+/* Style principal du calendrier */
+.calendar {
+  position: relative; /* Positionnement relatif pour les éléments internes */
+  width: 100%; /* Prend toute la largeur de son parent */
+  height: 100%; /* Prend toute la hauteur de son parent */
+  display: flex; /* Flexbox pour organiser les éléments du calendrier */
+  flex-direction: column; /* Orientation verticale des éléments */
+  flex-wrap: wrap; /* Permet au contenu de se répartir sur plusieurs lignes */
+  justify-content: space-between; /* Espacement égal entre les sections */
+  color: #878895; /* Couleur du texte */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Ombre portée */
+  border-radius: 5px; /* Coins arrondis */
+  background-color: #fff; /* Couleur de fond du calendrier */
+}
+
+/* Section mois dans le calendrier */
+.calendar .month {
+  width: 100%; /* Prend toute la largeur disponible */
+  height: 150px; /* Hauteur fixe pour la section du mois */
+  display: flex; /* Flexbox pour organiser les éléments du mois */
+  align-items: center; /* Centre verticalement les éléments du mois */
+  justify-content: space-between; /* Espacement égal entre les éléments */
+  padding: 0 50px; /* Espacement interne à gauche et à droite */
+  font-size: 1.2rem; /* Taille de police */
+  font-weight: 500; /* Poids de la police */
+  text-transform: capitalize; /* Met les premières lettres en majuscule */
+}
+
+/* Boutons de navigation dans le mois (précédent et suivant) */
+.calendar .month .prev,
+.calendar .month .next {
+  cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+}
+
+/* Effet au survol des boutons de mois */
+.calendar .month .prev:hover,
+.calendar .month .next:hover {
+  color: var(--primary-clr); /* Change la couleur du texte au survol */
+}
+
+/* Section des jours de la semaine */
+.calendar .weekdays {
+  width: 100%; /* Prend toute la largeur disponible */
+  display: flex; /* Flexbox pour organiser les jours de la semaine */
+  align-items: center; /* Centre verticalement les éléments */
+  justify-content: space-between; /* Espacement égal entre les jours */
+  padding: 0 20px; /* Espacement interne */
+  font-size: 1rem; /* Taille de la police */
+  font-weight: 500; /* Poids de la police */
+  text-transform: capitalize; /* Met les premières lettres en majuscule */
+}
+
+/* Style des jours de la semaine */
+.weekdays div {
+  width: 14.28%; /* Chaque jour occupe environ 1/7 de la largeur */
+  height: 100%; /* Prend toute la hauteur de son parent */
+  display: flex; /* Flexbox pour centrer les jours */
+  align-items: center; /* Centre verticalement les jours */
+  justify-content: center; /* Centre horizontalement les jours */
+}
+
+/* Section des jours du calendrier */
+.calendar .days {
+  width: 100%; /* Prend toute la largeur disponible */
+  display: flex; /* Flexbox pour organiser les jours */
+  flex-wrap: wrap; /* Permet aux jours de passer à la ligne suivante */
+  justify-content: space-between; /* Espacement égal entre les jours */
+  padding: 0 20px; /* Espacement interne */
+  font-size: 1rem; /* Taille de la police */
+  font-weight: 500; /* Poids de la police */
+  margin-bottom: 20px; /* Marge en bas du calendrier */
+}
+
+/* Style des jours individuels */
+.calendar .days .day {
+  width: 10.28%; /* Chaque jour occupe environ 1/10 de la largeur */
+  height: 60px; /* Hauteur fixe des jours */
+  display: flex; /* Flexbox pour centrer les jours */
+  align-items: center; /* Centre verticalement les jours */
+  justify-content: center; /* Centre horizontalement les jours */
+  cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+  color: var(--primary-clr); /* Couleur du texte */
+  border: 1px solid #f5f5f5; /* Bordure légère autour des jours */
+}
+
+/* Styles supplémentaires pour les bordures des jours */
+.calendar .days .day:nth-child(7n + 1) {
+  border-left: 2px solid #f5f5f5; /* Bordure à gauche du premier jour de chaque semaine */
+}
+.calendar .days .day:nth-child(7n) {
+  border-right: 2px solid #f5f5f5; /* Bordure à droite du dernier jour de chaque semaine */
+}
+.calendar .days .day:nth-child(-n + 7) {
+  border-top: 2px solid #f5f5f5; /* Bordure en haut des jours de la première semaine */
+}
+.calendar .days .day:nth-child(n + 29) {
+  border-bottom: 2px solid #f5f5f5; /* Bordure en bas des jours de la dernière semaine */
+}
+
+/* Effet au survol des jours */
+.calendar .days .day:not(.prev-date, .next-date):hover {
+  color: #fff; /* Change la couleur du texte */
+  background-color: var(--primary-clr); /* Change la couleur de fond */
+}
+
+/* Style des jours de dates précédentes et suivantes */
+.calendar .days .prev-date,
+.calendar .days .next-date {
+  color: #b3b3b3; /* Couleur grise pour les jours précédents et suivants */
+}
+
+/* Jour actif */
+.calendar .days .active {
+  position: relative; /* Positionnement relatif pour ajouter des effets de style */
+  font-size: 1rem; /* Taille de la police */
+  color: #fff; /* Couleur du texte */
+  background-color: var(--primary-clr); /* Couleur de fond pour le jour actif */
+}
+
+/* Effet d'ombre autour du jour actif */
+.calendar .days .active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px 2px var(--primary-clr); /* Ombre autour du jour actif */
+}
+
+/* Style du jour du calendrier qui est aujourd'hui */
+.calendar .days .today {
+  font-size: 1rem; /* Taille de la police pour aujourd'hui */
+}
+
+/* Style des événements dans les jours */
+.calendar .days .event {
+  position: relative; /* Positionnement relatif pour le style d'événement */
+}
+.calendar .days .event::after {
+  content: "";
+  position: absolute;
+  bottom: 10%; /* Positionne l'événement près du bas du jour */
+  left: 50%; /* Centre horizontalement l'événement */
+  width: 75%; /* Largeur de l'événement */
+  height: 6px; /* Hauteur de l'événement */
+  border-radius: 30px; /* Coins arrondis pour l'événement */
+  transform: translateX(-50%); /* Centre l'événement horizontalement */
+  background-color: var(--primary-clr); /* Couleur de fond de l'événement */
+}
+
+/* Effet au survol d'un jour contenant un événement */
+.calendar .days .day:hover.event::after {
+  background-color: #fff; /* Change la couleur de l'événement au survol */
+}
+
+/* Style des événements actifs */
+.calendar .days .active.event::after {
+  background-color: #fff; /* Couleur de fond de l'événement actif */
+  bottom: 20%; /* Décale l'événement vers le bas */
+}
+
+/* Ajustement du padding pour un événement actif */
+.calendar .days .active.event {
+  padding-bottom: 10px; /* Marge inférieure pour l'événement actif */
+}
+
+/* Section droite (informations supplémentaires) */
+.containers .right {
+  position: relative; /* Positionnement relatif pour le contenu */
+  width: 40%; /* Prend 40% de la largeur disponible */
+  min-height: 100%; /* Prend toute la hauteur de l'écran */
+  padding: 20px 0; /* Espacement interne */
+}
+
+/* Section affichant la date du jour */
+.right .today-date {
+  width: 100%; /* Prend toute la largeur */
+  height: 50px; /* Hauteur fixe */
+  display: flex; /* Flexbox pour aligner les éléments */
+  flex-wrap: wrap; /* Permet d'enrouler les éléments si nécessaire */
+  gap: 10px; /* Espacement entre les éléments */
+  align-items: center; /* Centre verticalement les éléments */
+  justify-content: space-between; /* Espacement égal entre les éléments */
+  padding: 0 40px; /* Espacement interne */
+  padding-left: 70px; /* Espacement supplémentaire à gauche */
+  margin-top: 50px; /* Marge en haut */
+  margin-bottom: 20px; /* Marge en bas */
+  text-transform: capitalize; /* Met les premières lettres en majuscule */
+}
+
+/* Style du jour de l'événement dans la section date */
+.right .today-date .event-day {
+  font-size: 2rem; /* Taille du texte pour le jour */
+  font-weight: 500; /* Poids de la police */
+}
+
+/* Style de la date dans la section date */
+.right .today-date .event-date {
+  font-size: 1rem; /* Taille de la police pour la date */
+  font-weight: 400; /* Poids léger pour la date */
+  color: #878895; /* Couleur gris clair pour la date */
+}
